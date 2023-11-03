@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+}
+
+h1{
+    font-size: 100px;
+    color: lightgray;
+    -webkit-text-stroke-color: darkgray;
+    -webkit-text-stroke-width: 3px;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-color:black;
+}
+
+
+.game-container{
+    display:flex;
+    flex-direction: column;
+    border: 5px solid black;
+    height: 500px;
+    width: 1000px;
+   justify-content: center;
+   justify-content: space-between;
+   align-items:center;
+   text-align: center;
+   padding: 20px;  
+   background-color: teal;
+   color:black;
+   
+}
+
+.middle-container{
+    display:flex;
+    flex-direction: row;
+    justify-content:center ;
+    justify-content: space-between;
+    width: 850px;
+    height: 200px;
+}
+
+.guess-container{
+    display:flex;
+    flex-direction:column;
+    
+    
+}
+
+.guess-count{
+    border: 2px solid;
+    width: 250px;
+    background-color: lightgray;
+}
+
+.textbox{
+    width: 250px;
+    height: 150px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.guess-track{
+    border: 2px solid;
+    width: 250px;
+    background-color: lightgray;
+}
+
+.button-container{
+    display:flex;
+    justify-content: center;
+    border: solid 2px;
+    width: 500px;
+    height: 75px;
+}
+
+.button{
+    width: 500px;
+    background-color:mediumorchid;
+
+}
