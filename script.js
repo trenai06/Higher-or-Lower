@@ -1,34 +1,66 @@
-let number = Math.floor((Math.random()* 100) + 1)
-// maybe put into a function to call on load. think through another function for calling numbers. 
+/* 1. computer generates a random number(1-100) (Not shown to player)
+ On load or have a prompt screen over game board(button to start the game) */ 
 
-let guess = []
-function playerGuess(guess){
- if(guess < number){
-    return (`Higher`)
- } else if(guess > number){
-    return(`Lower`)
- } else{
-    return('guess 1 - 100, please!!')
- }
+let number
+
+function computerAnswer(){
+   number = Math.floor((Math.random() * 100) + 1)
+   console.log(number)
+   return number
 }
 
-// 1. computer generates a random number(1-100) (Not shown to player)
-/* On load or have a prompt screen over game board */ 
+/* 2. player types in a guess (1 - 100) and clicks the button
+(push number to store in an empty array)*/
 
-// 2. player types in a guess (1 - 100) and clicks the button
-/*(push number to store in an empty array) */
+/* 3. a way to display what numbers have been guessed for player knowledge
+ on submit */
+let guess
+let track = []
 
-// 3. on submit computer tells player if they need to guess higher or lower
-/* alert or display on the container */
+function playerGuess(){
+   guess = document.getElementById("text").value
+   console.log(guess)
+   track.push(guess)
+   console.log(track)
+   document.getElementById("track").innerHTML = track.join(' ',' ' )
+   return parseInt(guess)
+}
 
-// 4. a way to track number of guesses and display for player knowledge
-/* On submit, 5 guesses */
 
-// 5. a way to display what numbers have been guessed for player knowledge
-/* on submit */
+/* 4. on submit computer tells player if they need to guess higher or lower
+ alert or display on the container */
 
-// 6. Game over  win lost, You win win won
+function results(){
+   if( guess == number){
+      return document.getElementById("guess").innerHTML = ('You Win!')
+   } else if( guess < number){
+      return document.getElementById("guess").innerHTML = (`The Number is Higher!`)
+   } else if(guess > number){
+      return document.getElementById("guess").innerHTML = (`The Number is Lower!`)
+   } else {
+      return document.getElementById("guess").innerHTML = (`Please choose 1 - 100!`)
+   }
+}
 
-// 7. Reload when finished and start a new game.
 
-// 8. polish styling (text sizing, maybe font family change, look at color scheme some more)
+/* 5. a way to track number of guesses and display for player knowledge
+ On submit, 5 guesses */
+guessCount = ["5", "4", "3", "2", "1"]
+document.getElementById("count").innerHTML = guessCount.join(" ")
+
+function guessPop(){
+   document.getElementById("count").innerHTML = guessCount.pop()
+   
+}
+
+
+/* 6. reset text field for new guess */
+
+// 7. Game over after 5 guesses
+
+// 8. Reload when finished and start a new game.
+
+// 9. polish styling (text sizing, maybe font family change, look at color scheme some more)
+
+
+//create variables for functions

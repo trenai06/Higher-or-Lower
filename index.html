@@ -6,34 +6,37 @@
     <title>Higher Or Lower</title>
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body onload="computerAnswer()">
     <div class="container">
         <h1> Higher or Lower </h1>
 
         <div class="game-container"> 
 
-            <h3> The computer will pick a number. You choose a number(1 - 100) and then the computer will tell you if your guess needs to be higher or lower than your previous answer.  
-                You win if the correct answer is chosen. You have 5 guesses. </h3>
+            <h3> The computer will pick a number. Choose a number (1 - 100) to try and guess what it is (You will get a hint if the number is higher or lower than yours).   
+                You win if the correct answer is chosen! You have 5 guesses.  </h3>
 
             <div class="middle-container">
-                <div class="guess-count">
-                    Guess Count
+                <div class="guess-count font">
+                    <h2> Guess Count</h2>
+                    <div id="count"> </div>
                 </div>
     
                 <div class="guess-container">
                     
-                    <label for="text"> Your Guess </label>
+                    <label id="guess" for="text"> Your Guess </label>
                     <input class="textbox" type="text" id="text" name="text">
                 </div>
 
-                <div class="guess-track">
-                    Guess Track
+                <div class="guess-track font">
+                    <h2>Guess Track</h2>
+                    <div id="track"> </div>
                 </div>
             </div>
 
 
             <div class="button-container">
-                <button class="button"> Guess </button>
+                
+                <button onclick="playerGuess(), results(), guessPop()" class="button font"> Guess </button>
             </div>
         </div>
     
