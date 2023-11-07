@@ -32,10 +32,10 @@ function playerGuess(){
 
 function results(){
    if( guess == number){
-      return document.getElementById("guess").innerHTML = ('You Win!')
-   } else if( guess < number){
+     return document.getElementById("guess").innerHTML =  ('You Win!')
+   } else if( guess < number && guess >= 0){
       return document.getElementById("guess").innerHTML = (`The Number is Higher!`)
-   } else if(guess > number){
+   } else if(guess > number && guess <= 100){
       return document.getElementById("guess").innerHTML = (`The Number is Lower!`)
    } else {
       return document.getElementById("guess").innerHTML = (`Please choose 1 - 100!`)
@@ -56,9 +56,12 @@ function guessPop(){
 
 /* 6. reset text field for new guess */
 
-// 7. Game over after 5 guesses
+/* 7. Game over after 5 guesses 
+      alert prompt*/
+// Game Win
 
 // 8. Reload when finished and start a new game.
+//click okay after game over prompt
 
 // 9. polish styling (text sizing, maybe font family change, look at color scheme some more)
 
