@@ -18,13 +18,13 @@
             <div class="middle-container">
                 <div class="guess-count font">
                     <h2> Guess Count</h2>
-                    <div id="count"> </div>
+                    <div id="count"> 5 </div>
                 </div>
     
-                <div class="guess-container">
+                <div id="guessForm" class="guess-container">
                     
                     <label id="guess" for="text"> Your Guess </label>
-                    <input class="textbox" type="text" id="text" name="text">
+                    <input onfocus="this.value = '' " class="textbox" type="text" id="text" name="text">
                 </div>
 
                 <div class="guess-track font">
@@ -36,7 +36,7 @@
 
             <div class="button-container">
                 
-                <button onclick="playerGuess(), results(), guessPop()" class="button font"> Guess </button>
+                <button onclick="results(), gameOver()" class="button font"> Guess </button>
             </div>
         </div>
     
